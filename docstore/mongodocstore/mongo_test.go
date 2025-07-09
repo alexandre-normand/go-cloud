@@ -28,11 +28,11 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"gocloud.dev/docstore"
-	"gocloud.dev/docstore/driver"
-	"gocloud.dev/docstore/drivertest"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/testing/setup"
+	"github.com/alexandre-normand/go-cloud/docstore"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/docstore/drivertest"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/testing/setup"
 )
 
 const (

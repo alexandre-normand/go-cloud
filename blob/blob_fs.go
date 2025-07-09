@@ -22,8 +22,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
 )
 
 // Ensure that Bucket implements various io/fs interfaces.

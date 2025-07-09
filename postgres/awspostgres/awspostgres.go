@@ -24,7 +24,7 @@
 // see URLOpener.
 //
 // See https://gocloud.dev/concepts/urls/ for background information.
-package awspostgres // import "gocloud.dev/postgres/awspostgres"
+package awspostgres // import "github.com/alexandre-normand/go-cloud/postgres/awspostgres"
 
 import (
 	"context"
@@ -39,8 +39,8 @@ import (
 
 	"github.com/XSAM/otelsql"
 	"github.com/lib/pq"
-	"gocloud.dev/aws/rds"
-	"gocloud.dev/postgres"
+	"github.com/alexandre-normand/go-cloud/aws/rds"
+	"github.com/alexandre-normand/go-cloud/postgres"
 )
 
 // URLOpener opens RDS PostgreSQL URLs

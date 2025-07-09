@@ -27,10 +27,10 @@ import (
 	"unicode/utf8"
 
 	"go.opentelemetry.io/otel/trace"
-	"gocloud.dev/docstore/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	gcdkotel "gocloud.dev/internal/otel"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	gcdkotel "github.com/alexandre-normand/go-cloud/internal/otel"
 )
 
 // A Document is a set of field-value pairs. One or more fields, called the key
@@ -52,7 +52,7 @@ type Collection struct {
 	closed bool
 }
 
-const pkgName = "gocloud.dev/docstore"
+const pkgName = "github.com/alexandre-normand/go-cloud/docstore"
 
 var (
 

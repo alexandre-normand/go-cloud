@@ -21,7 +21,7 @@ import (
 
 	"github.com/google/go-cmdtest"
 	"github.com/streadway/amqp"
-	"gocloud.dev/internal/testing/setup"
+	"github.com/alexandre-normand/go-cloud/internal/testing/setup"
 )
 
 // Requires rabbit to be running. Run pubsub/rabbitpubsub/localrabbit.sh.
@@ -73,7 +73,7 @@ func initRabbit() error {
 		false,    // delete when unused
 		false,    // internal
 		false,    // wait for server response
-		nil)      // args
+		nil) // args
 	if err != nil {
 		return err
 	}
@@ -82,7 +82,7 @@ func initRabbit() error {
 		false, // delete when unused
 		false, // exclusive
 		false, // wait for server response
-		nil)   // args
+		nil) // args
 	if err != nil {
 		return err
 	}

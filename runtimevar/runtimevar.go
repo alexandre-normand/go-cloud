@@ -23,12 +23,12 @@
 // OpenTelemetry supports tracing and metric collection for multiple languages and
 // backend providers. See https://opentelemetry.io.
 //
-// This API collects an OpenTelemetry metric "gocloud.dev/runtimevar/value_changes",
+// This API collects an OpenTelemetry metric "github.com/alexandre-normand/go-cloud/runtimevar/value_changes",
 // a count of the number of times all variables have changed values, by driver.
 //
 // To enable metric collection in your application, see the OpenTelemetry documentation at
 // https://opentelemetry.io/docs/instrumentation/go/getting-started/
-package runtimevar // import "gocloud.dev/runtimevar"
+package runtimevar // import "github.com/alexandre-normand/go-cloud/runtimevar"
 
 import (
 	"bytes"
@@ -45,12 +45,12 @@ import (
 	"time"
 
 	"go.opentelemetry.io/otel/metric"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/openurl"
-	"gocloud.dev/runtimevar/driver"
-	"gocloud.dev/secrets"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/openurl"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/secrets"
 
-	gcdkotel "gocloud.dev/internal/otel"
+	gcdkotel "github.com/alexandre-normand/go-cloud/internal/otel"
 )
 
 // Snapshot contains a snapshot of a variable's value and metadata about it.
@@ -77,7 +77,7 @@ func (s *Snapshot) As(i any) bool {
 	return s.asFunc(i)
 }
 
-const pkgName = "gocloud.dev/runtimevar"
+const pkgName = "github.com/alexandre-normand/go-cloud/runtimevar"
 
 var (
 	OpenTelemetryViews = gcdkotel.CounterView(pkgName, "/value_changes",

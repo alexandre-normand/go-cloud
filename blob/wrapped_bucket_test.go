@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/fileblob"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/fileblob"
 )
 
 func TestPrefixedBucket(t *testing.T) {

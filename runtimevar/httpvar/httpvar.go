@@ -30,7 +30,7 @@
 // httpvar exposes the following types for As:
 //   - Snapshot: *http.Response
 //   - Error: httpvar.RequestError, url.Error
-package httpvar // import "gocloud.dev/runtimevar/httpvar"
+package httpvar // import "github.com/alexandre-normand/go-cloud/runtimevar/httpvar"
 
 import (
 	"bytes"
@@ -42,10 +42,10 @@ import (
 	"os"
 	"time"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 )
 
 func init() {

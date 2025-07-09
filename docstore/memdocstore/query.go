@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"gocloud.dev/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
 )
 
 func (c *collection) RunGetQuery(_ context.Context, q *driver.Query) (driver.DocumentIterator, error) {

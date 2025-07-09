@@ -24,11 +24,11 @@ instruments the connection with [OpenCensus metrics][].
 
 The portable function for MySQL is [`mysql.Open`][]:
 
-{{< goexample "gocloud.dev/mysql.ExampleOpen" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/mysql.ExampleOpen" >}}
 
 And the portable function for PostgreSQL is [`postgres.Open`][]:
 
-{{< goexample "gocloud.dev/postgres.ExampleOpen" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/postgres.ExampleOpen" >}}
 
 [`mysql.Open`]: https://godoc.org/gocloud.dev/mysql#Open
 [OpenCensus metrics]: https://opencensus.io/integrations/sql/go_sql/
@@ -39,11 +39,11 @@ And the portable function for PostgreSQL is [`postgres.Open`][]:
 
 Users of [GCP Cloud SQL for MySQL][] should import the `gocloud.dev/mysql/gcpmysql` package:
 
-{{< goexample "gocloud.dev/mysql/gcpmysql.Example" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/mysql/gcpmysql.Example" >}}
 
 Users of [GCP Cloud SQL for PostgreSQL][] should import the `gocloud.dev/postgres/gcppostgres` package:
 
-{{< goexample "gocloud.dev/postgres/gcppostgres.Example" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/postgres/gcppostgres.Example" >}}
 
 [GCP Cloud SQL for MySQL]: https://cloud.google.com/sql/docs/mysql/
 [GCP Cloud SQL for PostgreSQL]: https://cloud.google.com/sql/docs/postgres/
@@ -52,11 +52,11 @@ Users of [GCP Cloud SQL for PostgreSQL][] should import the `gocloud.dev/postgre
 
 Users of [AWS RDS for MySQL][] should import the `gocloud.dev/mysql/awsmysql` package:
 
-{{< goexample "gocloud.dev/mysql/awsmysql.Example" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/mysql/awsmysql.Example" >}}
 
 Users of [AWS RDS for PostgreSQL][] should import the `gocloud.dev/postgres/awspostgres` package:
 
-{{< goexample "gocloud.dev/postgres/awspostgres.Example" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/postgres/awspostgres.Example" >}}
 
 [AWS RDS for MySQL]: https://aws.amazon.com/rds/mysql/
 [AWS RDS for PostgreSQL]: https://aws.amazon.com/rds/postgresql/
@@ -65,7 +65,7 @@ Users of [AWS RDS for PostgreSQL][] should import the `gocloud.dev/postgres/awsp
 
 Users of [Azure Database for MySQL][] should import the `gocloud.dev/mysql/azuremysql` package:
 
-{{< goexample "gocloud.dev/mysql/azuremysql.Example" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/mysql/azuremysql.Example" >}}
 
 [Azure Database for MySQL]: https://azure.microsoft.com/en-us/services/mysql/
 

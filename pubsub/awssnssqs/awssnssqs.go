@@ -61,7 +61,7 @@
 //   - Message.BeforeSend: *sns.PublishBatchRequestEntry or *sns.PublishInput (deprecated) for OpenSNSTopic, *sqstypes.SendMessageBatchRequestEntry for OpenSQSTopic
 //   - Message.AfterSend: snstypes.PublishBatchResultEntry or *sns.PublishOutput (deprecated) for OpenSNSTopic, sqstypes.SendMessageBatchResultEntry for OpenSQSTopic
 //   - Error: any error type returned by the service, notably smithy.APIError
-package awssnssqs // import "gocloud.dev/pubsub/awssnssqs"
+package awssnssqs // import "github.com/alexandre-normand/go-cloud/pubsub/awssnssqs"
 
 import (
 	"context"
@@ -84,12 +84,12 @@ import (
 	sqstypes "github.com/aws/aws-sdk-go-v2/service/sqs/types"
 	"github.com/aws/smithy-go"
 	"github.com/google/wire"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/escape"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/batcher"
-	"gocloud.dev/pubsub/driver"
+	gcaws "github.com/alexandre-normand/go-cloud/aws"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/escape"
+	"github.com/alexandre-normand/go-cloud/pubsub"
+	"github.com/alexandre-normand/go-cloud/pubsub/batcher"
+	"github.com/alexandre-normand/go-cloud/pubsub/driver"
 )
 
 const (
@@ -388,8 +388,8 @@ func maybeEncodeBody(body []byte, opt BodyBase64Encoding) (string, bool) {
 // For example, to set a deduplication ID and message group ID on a message:
 //
 //	import (
-//		"gocloud.dev/pubsub"
-//		"gocloud.dev/pubsub/awssnssqs"
+//		"github.com/alexandre-normand/go-cloud/pubsub"
+//		"github.com/alexandre-normand/go-cloud/pubsub/awssnssqs"
 //	)
 //
 //	message := pubsub.Message{

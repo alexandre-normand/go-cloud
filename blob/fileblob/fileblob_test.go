@@ -28,10 +28,10 @@ import (
 	"strings"
 	"testing"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/blob/drivertest"
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/driver"
+	"github.com/alexandre-normand/go-cloud/blob/drivertest"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 type harness struct {

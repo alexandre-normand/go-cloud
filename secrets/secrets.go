@@ -29,25 +29,25 @@
 //
 // All trace and metric names begin with the package import path.
 // The traces add the method name.
-// For example, "gocloud.dev/secrets/Encrypt".
+// For example, "github.com/alexandre-normand/go-cloud/secrets/Encrypt".
 // The metrics are "completed_calls", a count of completed method calls by driver,
 // method and status (error code); and "latency", a distribution of method latency
 // by driver and method.
-// For example, "gocloud.dev/secrets/latency".
+// For example, "github.com/alexandre-normand/go-cloud/secrets/latency".
 //
 // To enable trace collection in your application, see the OpenTelemetry documentation at
 // https://opentelemetry.io/docs/instrumentation/go/getting-started/.
-package secrets // import "gocloud.dev/secrets"
+package secrets // import "github.com/alexandre-normand/go-cloud/secrets"
 
 import (
 	"context"
 	"net/url"
 	"sync"
 
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/openurl"
-	gcdkotel "gocloud.dev/internal/otel"
-	"gocloud.dev/secrets/driver"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/openurl"
+	gcdkotel "github.com/alexandre-normand/go-cloud/internal/otel"
+	"github.com/alexandre-normand/go-cloud/secrets/driver"
 )
 
 // Keeper does encryption and decryption. To create a Keeper, use constructors
@@ -74,7 +74,7 @@ func newKeeper(k driver.Keeper) *Keeper {
 	}
 }
 
-const pkgName = "gocloud.dev/secrets"
+const pkgName = "github.com/alexandre-normand/go-cloud/secrets"
 
 var (
 

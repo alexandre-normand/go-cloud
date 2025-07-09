@@ -18,9 +18,9 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/gcp"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/gcppubsub"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/pubsub"
+	"github.com/alexandre-normand/go-cloud/pubsub/gcppubsub"
 
 	raw "cloud.google.com/go/pubsub/apiv1"
 	pb "cloud.google.com/go/pubsub/apiv1/pubsubpb"
@@ -62,7 +62,7 @@ func ExampleOpenTopic() {
 
 func Example_openTopicFromURL() {
 	// PRAGMA: This example is used on gocloud.dev; PRAGMA comments adjust how it is shown and can be ignored.
-	// PRAGMA: On gocloud.dev, add a blank import: _ "gocloud.dev/pubsub/gcppubsub"
+	// PRAGMA: On gocloud.dev, add a blank import: _ "github.com/alexandre-normand/go-cloud/pubsub/gcppubsub"
 	// PRAGMA: On gocloud.dev, hide lines until the next blank line.
 	ctx := context.Background()
 
@@ -155,7 +155,7 @@ func Example_extendingAckDeadline() {
 
 func Example_openSubscriptionFromURL() {
 	// PRAGMA: This example is used on gocloud.dev; PRAGMA comments adjust how it is shown and can be ignored.
-	// PRAGMA: On gocloud.dev, add a blank import: _ "gocloud.dev/pubsub/gcppubsub"
+	// PRAGMA: On gocloud.dev, add a blank import: _ "github.com/alexandre-normand/go-cloud/pubsub/gcppubsub"
 	// PRAGMA: On gocloud.dev, hide lines until the next blank line.
 	ctx := context.Background()
 

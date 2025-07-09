@@ -45,4 +45,4 @@ See https://gocloud.dev/concepts/urls/ for a discussion of URLs in the Go CDK.
 See https://gocloud.dev/concepts/as/ for a discussion of how to write
 service-specific code with the Go CDK.
 */
-package cloud // import "gocloud.dev"
+package cloud // import "github.com/alexandre-normand/go-cloud"

@@ -60,7 +60,7 @@
 // https://cloud.google.com/firestore/docs/query-data/indexing for details.
 //
 // See https://cloud.google.com/firestore/docs/query-data/queries for more information on Firestore queries.
-package gcpfirestore // import "gocloud.dev/docstore/gcpfirestore"
+package gcpfirestore // import "github.com/alexandre-normand/go-cloud/docstore/gcpfirestore"
 
 import (
 	"bytes"
@@ -75,12 +75,12 @@ import (
 	vkit "cloud.google.com/go/firestore/apiv1"
 	pb "cloud.google.com/go/firestore/apiv1/firestorepb"
 	"github.com/google/wire"
-	"gocloud.dev/docstore"
-	"gocloud.dev/docstore/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
+	"github.com/alexandre-normand/go-cloud/docstore"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/useragent"
 	"google.golang.org/api/option"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

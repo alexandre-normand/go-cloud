@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/pubsub"
+	"github.com/alexandre-normand/go-cloud/pubsub/driver"
 )
 
 type ackingDriverSub struct {

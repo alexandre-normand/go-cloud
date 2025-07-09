@@ -24,7 +24,7 @@ import (
 	"sync"
 
 	"go.mongodb.org/mongo-driver/mongo"
-	"gocloud.dev/docstore"
+	"github.com/alexandre-normand/go-cloud/docstore"
 )
 
 func init() {

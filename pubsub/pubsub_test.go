@@ -25,11 +25,11 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/testing/oteltest"
-	"gocloud.dev/pubsub/batcher"
-	"gocloud.dev/pubsub/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/testing/oteltest"
+	"github.com/alexandre-normand/go-cloud/pubsub/batcher"
+	"github.com/alexandre-normand/go-cloud/pubsub/driver"
 )
 
 type driverTopic struct {
@@ -611,7 +611,7 @@ func TestOpenTelemetry(t *testing.T) {
 	spans := te.GetSpans()
 	metrics := te.GetMetrics(ctx)
 
-	diff := oteltest.Diff(spans.Snapshots(), metrics, pkgName, "gocloud.dev/pubsub", []oteltest.Call{
+	diff := oteltest.Diff(spans.Snapshots(), metrics, pkgName, "github.com/alexandre-normand/go-cloud/pubsub", []oteltest.Call{
 		{Method: "driver.Topic.SendBatch", Code: gcerrors.OK},
 		{Method: "Topic.Send", Code: gcerrors.OK},
 		{Method: "Topic.Shutdown", Code: gcerrors.OK},

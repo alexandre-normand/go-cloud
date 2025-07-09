@@ -15,12 +15,12 @@
 // Package driver defines interfaces to be implemented by pubsub drivers, which
 // will be used by the pubsub package to interact with the underlying services.
 // Application code should use package pubsub.
-package driver // import "gocloud.dev/pubsub/driver"
+package driver // import "github.com/alexandre-normand/go-cloud/pubsub/driver"
 
 import (
 	"context"
 
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 // AckID is the identifier of a message for purposes of acknowledgement.

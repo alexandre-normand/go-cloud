@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/constantvar"
-	"gocloud.dev/secrets"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/constantvar"
+	"github.com/alexandre-normand/go-cloud/secrets"
 
-	_ "gocloud.dev/runtimevar/gcpruntimeconfig"
+	_ "github.com/alexandre-normand/go-cloud/runtimevar/gcpruntimeconfig"
 	runtimeconfig "google.golang.org/genproto/googleapis/cloud/runtimeconfig/v1beta1"
 	"google.golang.org/grpc/status"
 )
@@ -40,7 +40,7 @@ func Example_jsonDecoder() {
 	}
 
 	// A sample JSON config that will decode into Config.
-	const jsonConfig = `{"Host": "gocloud.dev", "Port": 8080}`
+	const jsonConfig = `{"Host": "github.com/alexandre-normand/go-cloud", "Port": 8080}`
 
 	// Construct a Decoder that decodes raw bytes into our config.
 	decoder := runtimevar.NewDecoder(Config{}, runtimevar.JSONDecode)

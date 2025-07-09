@@ -27,10 +27,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/aws/aws-sdk-go-v2/service/s3/types"
 	"github.com/aws/smithy-go"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/blob/drivertest"
-	"gocloud.dev/internal/testing/setup"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/driver"
+	"github.com/alexandre-normand/go-cloud/blob/drivertest"
+	"github.com/alexandre-normand/go-cloud/internal/testing/setup"
 )
 
 // These constants record the region & bucket used for the last --record.

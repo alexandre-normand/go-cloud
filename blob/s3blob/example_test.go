@@ -20,8 +20,8 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/s3blob"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/s3blob"
 )
 
 func ExampleOpenBucket() {
@@ -47,7 +47,7 @@ func ExampleOpenBucket() {
 
 func Example_openBucketFromURL() {
 	// PRAGMA: This example is used on gocloud.dev; PRAGMA comments adjust how it is shown and can be ignored.
-	// PRAGMA: On gocloud.dev, add a blank import: _ "gocloud.dev/blob/s3blob"
+	// PRAGMA: On gocloud.dev, add a blank import: _ "github.com/alexandre-normand/go-cloud/blob/s3blob"
 	// PRAGMA: On gocloud.dev, hide lines until the next blank line.
 	ctx := context.Background()
 

@@ -53,7 +53,7 @@
 //   - SignedURLOptions.BeforeSign: *s3.GetObjectInput, when Options.Method == http.MethodGet, or
 //       *s3.PutObjectInput, when Options.Method == http.MethodPut
 
-package s3blob // import "gocloud.dev/blob/s3blob"
+package s3blob // import "github.com/alexandre-normand/go-cloud/blob/s3blob"
 
 import (
 	"context"
@@ -74,12 +74,12 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3/types"
 	"github.com/aws/smithy-go"
 	"github.com/google/wire"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/escape"
-	"gocloud.dev/internal/gcerr"
+	gcaws "github.com/alexandre-normand/go-cloud/aws"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/escape"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
 )
 
 const defaultPageSize = 1000

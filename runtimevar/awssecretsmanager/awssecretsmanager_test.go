@@ -27,13 +27,13 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/secretsmanager"
 	"github.com/aws/smithy-go"
 	"github.com/googleapis/gax-go/v2"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/retry"
-	"gocloud.dev/internal/testing/setup"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
-	"gocloud.dev/runtimevar/drivertest"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/retry"
+	"github.com/alexandre-normand/go-cloud/internal/testing/setup"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/runtimevar/drivertest"
 )
 
 // This constant records the region used for the last --record.

@@ -41,8 +41,8 @@ import (
 	"sync"
 
 	"github.com/hashicorp/vault/api"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/secrets"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/secrets"
 )
 
 // Config is the authentication configurations of the Vault server.

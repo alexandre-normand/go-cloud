@@ -369,7 +369,7 @@ func OpenWidget(ctx context.Context, c *gcp.HTTPClient, name string, opts *Optio
 Using the global default mux:
 
 ```go
-import _ "gocloud.dev/foo/gcpfoo"
+import _ "github.com/alexandre-normand/go-cloud/foo/gcpfoo"
 
 // ...
 

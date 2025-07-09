@@ -23,9 +23,9 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/blob"
-	"gocloud.dev/pubsub"
-	_ "gocloud.dev/pubsub/mempubsub"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/pubsub"
+	_ "github.com/alexandre-normand/go-cloud/pubsub/mempubsub"
 )
 
 func TestHandleRequest(t *testing.T) {

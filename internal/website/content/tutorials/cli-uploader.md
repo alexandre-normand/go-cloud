@@ -66,7 +66,7 @@ package main
 import (
     // previous imports omitted
 
-    "gocloud.dev/blob"
+    "github.com/alexandre-normand/go-cloud/blob"
 )
 
 func main() {
@@ -94,9 +94,9 @@ import (
     // previous imports omitted
 
     // Import the blob packages we want to be able to open.
-    _ "gocloud.dev/blob/azureblob"
-    _ "gocloud.dev/blob/gcsblob"
-    _ "gocloud.dev/blob/s3blob"
+    _ "github.com/alexandre-normand/go-cloud/blob/azureblob"
+    _ "github.com/alexandre-normand/go-cloud/blob/gcsblob"
+    _ "github.com/alexandre-normand/go-cloud/blob/s3blob"
 )
 
 func main() {

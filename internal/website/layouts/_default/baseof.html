@@ -19,8 +19,8 @@
   <link rel="{{.Rel}}" type="{{.MediaType.Type}}" href="{{.RelPermalink}}" title="{{with $.CurrentSection}}{{.Title}}{{else}}{{$.Page.Title}}{{end}}" />
   {{- end }}
   {{- if .Page.Params.pkgmeta }}
-  <meta name="go-import" content="gocloud.dev git https://github.com/google/go-cloud">
-  <meta name="go-source" content="gocloud.dev https://github.com/google/go-cloud https://github.com/google/go-cloud/tree/master{/dir} https://github.com/google/go-cloud/tree/master{/dir}/{file}#L{line}">
+  <meta name="go-import" content="github.com/alexandre-normand/go-cloud git https://github.com/google/go-cloud">
+  <meta name="go-source" content="github.com/alexandre-normand/go-cloud https://github.com/google/go-cloud https://github.com/google/go-cloud/tree/master{/dir} https://github.com/google/go-cloud/tree/master{/dir}/{file}#L{line}">
   {{- end }}
   {{ template "_internal/google_analytics_async.html" . }}
 </head>

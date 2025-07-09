@@ -55,7 +55,7 @@
 //   - CopyOptions.BeforeCopy: *CopyObjectHandles, *storage.Copier (if accessing both, must be in that order)
 //   - WriterOptions.BeforeWrite: **storage.ObjectHandle, *storage.Writer (if accessing both, must be in that order)
 //   - SignedURLOptions.BeforeSign: *storage.SignedURLOptions
-package gcsblob // import "gocloud.dev/blob/gcsblob"
+package gcsblob // import "github.com/alexandre-normand/go-cloud/blob/gcsblob"
 
 import (
 	"context"
@@ -80,13 +80,13 @@ import (
 	"google.golang.org/api/iterator"
 	"google.golang.org/api/option"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/escape"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/internal/escape"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/useragent"
 )
 
 const defaultPageSize = 1000

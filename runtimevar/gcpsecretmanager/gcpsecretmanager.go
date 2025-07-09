@@ -33,7 +33,7 @@
 // gcpsecretmanager exposes the following types for As:
 //   - Snapshot: *secretmanagerpb.AccessSecretVersionResponse
 //   - Error: *status.Status
-package gcpsecretmanager // import "gocloud.dev/runtimevar/gcpsecretmanager"
+package gcpsecretmanager // import "github.com/alexandre-normand/go-cloud/runtimevar/gcpsecretmanager"
 
 import (
 	"bytes"
@@ -49,11 +49,11 @@ import (
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
 	"cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
 	"github.com/google/wire"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 	"google.golang.org/api/option"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

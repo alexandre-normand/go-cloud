@@ -25,7 +25,7 @@
 // # As
 //
 // constantvar does not support any types for As.
-package constantvar // import "gocloud.dev/runtimevar/constantvar"
+package constantvar // import "github.com/alexandre-normand/go-cloud/runtimevar/constantvar"
 
 import (
 	"context"
@@ -35,9 +35,9 @@ import (
 	"os"
 	"time"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 )
 
 func init() {

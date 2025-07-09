@@ -14,7 +14,7 @@
 
 // Package driver defines an interface for custom HTTP listeners.
 // Application code should use package server.
-package driver // import "gocloud.dev/server/driver"
+package driver // import "github.com/alexandre-normand/go-cloud/server/driver"
 
 import (
 	"context"

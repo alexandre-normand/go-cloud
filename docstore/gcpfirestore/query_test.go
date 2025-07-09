@@ -21,8 +21,8 @@ import (
 
 	pb "cloud.google.com/go/firestore/apiv1/firestorepb"
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/docstore/driver"
-	"gocloud.dev/docstore/drivertest"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/docstore/drivertest"
 	"google.golang.org/protobuf/proto"
 )
 

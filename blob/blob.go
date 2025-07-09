@@ -47,11 +47,11 @@
 //
 // All trace and metric names begin with the package import path.
 // The traces add the method name.
-// For example, "gocloud.dev/blob/Attributes".
+// For example, "github.com/alexandre-normand/go-cloud/blob/Attributes".
 // The metrics are "completed_calls", a count of completed method calls by driver,
 // method and status (error code); and "latency", a distribution of method latency
 // by driver and method.
-// For example, "gocloud.dev/blob/latency".
+// For example, "github.com/alexandre-normand/go-cloud/blob/latency".
 //
 // It also collects the following metrics:
 //   - gocloud.dev/blob/bytes_read: the total number of bytes read, by driver.
@@ -61,7 +61,7 @@
 // https://opentelemetry.io/docs/instrumentation/go/getting-started/.
 // To enable metric collection in your application, see the documentation at
 // https://opentelemetry.io/docs/instrumentation/go/manual/.
-package blob // import "gocloud.dev/blob"
+package blob // import "github.com/alexandre-normand/go-cloud/blob"
 
 import (
 	"bytes"
@@ -81,11 +81,11 @@ import (
 	"unicode/utf8"
 
 	"go.opentelemetry.io/otel/metric"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/openurl"
-	gcdkotel "gocloud.dev/internal/otel"
+	"github.com/alexandre-normand/go-cloud/blob/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/openurl"
+	gcdkotel "github.com/alexandre-normand/go-cloud/internal/otel"
 )
 
 // Ensure that Reader implements io.ReadSeekCloser.
@@ -663,7 +663,7 @@ type Bucket struct {
 	closed bool
 }
 
-const pkgName = "gocloud.dev/blob"
+const pkgName = "github.com/alexandre-normand/go-cloud/blob"
 
 var (
 

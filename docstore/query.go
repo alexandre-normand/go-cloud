@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"go.opentelemetry.io/otel/trace"
-	"gocloud.dev/docstore/driver"
-	"gocloud.dev/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
 )
 
 // Query represents a query over a collection.

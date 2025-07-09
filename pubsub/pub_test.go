@@ -20,8 +20,8 @@ import (
 	"testing"
 	"time"
 
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/driver"
+	"github.com/alexandre-normand/go-cloud/pubsub"
+	"github.com/alexandre-normand/go-cloud/pubsub/driver"
 )
 
 type funcTopic struct {

@@ -29,7 +29,7 @@
 // etcdvar exposes the following types for As:
 //   - Snapshot: *clientv3.GetResponse
 //   - Error: rpctypes.EtcdError
-package etcdvar // import "gocloud.dev/runtimevar/etcdvar"
+package etcdvar // import "github.com/alexandre-normand/go-cloud/runtimevar/etcdvar"
 
 import (
 	"context"
@@ -43,9 +43,9 @@ import (
 
 	"go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/etcdserver/api/v3rpc/rpctypes"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 	"google.golang.org/grpc/codes"
 )
 

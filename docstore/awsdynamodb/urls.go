@@ -23,8 +23,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws/client"
 	dyn "github.com/aws/aws-sdk-go/service/dynamodb"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/docstore"
+	gcaws "github.com/alexandre-normand/go-cloud/aws"
+	"github.com/alexandre-normand/go-cloud/docstore"
 )
 
 func init() {

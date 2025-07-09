@@ -33,7 +33,7 @@
 // gcpruntimeconfig exposes the following types for As:
 //   - Snapshot: *pb.Variable
 //   - Error: *status.Status
-package gcpruntimeconfig // import "gocloud.dev/runtimevar/gcpruntimeconfig"
+package gcpruntimeconfig // import "github.com/alexandre-normand/go-cloud/runtimevar/gcpruntimeconfig"
 
 import (
 	"bytes"
@@ -46,12 +46,12 @@ import (
 	"time"
 
 	"github.com/google/wire"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/useragent"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 	pb "google.golang.org/genproto/googleapis/cloud/runtimeconfig/v1beta1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

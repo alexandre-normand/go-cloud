@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"testing"
 
-	"gocloud.dev/internal/testing/terraform"
-	"gocloud.dev/mysql"
+	"github.com/alexandre-normand/go-cloud/internal/testing/terraform"
+	"github.com/alexandre-normand/go-cloud/mysql"
 )
 
 func TestURLOpener(t *testing.T) {

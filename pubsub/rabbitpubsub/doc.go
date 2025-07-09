@@ -51,4 +51,4 @@
 //   - Message.AfterSend: None
 //   - Message: amqp.Delivery
 //   - Error: *amqp.Error and MultiError
-package rabbitpubsub // import "gocloud.dev/pubsub/rabbitpubsub"
+package rabbitpubsub // import "github.com/alexandre-normand/go-cloud/pubsub/rabbitpubsub"

@@ -17,10 +17,10 @@ package blob_test
 import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/sdk/metric/metricdata"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/memblob"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/testing/oteltest"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/memblob"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/testing/oteltest"
 	"testing"
 )
 
@@ -53,12 +53,12 @@ func TestOpenTelemetry(t *testing.T) {
 		t.Fatal("got nil, want error")
 	}
 
-	const driver = "gocloud.dev/blob/memblob"
+	const driver = "github.com/alexandre-normand/go-cloud/blob/memblob"
 
 	spans := te.GetSpans()
 	metrics := te.GetMetrics(ctx)
 
-	diff := oteltest.Diff(spans.Snapshots(), metrics, "gocloud.dev/blob", driver, []oteltest.Call{
+	diff := oteltest.Diff(spans.Snapshots(), metrics, "github.com/alexandre-normand/go-cloud/blob", driver, []oteltest.Call{
 		{Method: "NewWriter", Code: gcerrors.OK},
 		{Method: "NewRangeReader", Code: gcerrors.OK},
 		{Method: "Attributes", Code: gcerrors.OK},
@@ -79,12 +79,12 @@ func TestOpenTelemetry(t *testing.T) {
 		for _, data := range sm.Metrics {
 
 			switch data.Name {
-			case "gocloud.dev/blob/bytes_read":
+			case "github.com/alexandre-normand/go-cloud/blob/bytes_read":
 				if sawRead {
 					continue
 				}
 				sawRead = true
-			case "gocloud.dev/blob/bytes_written":
+			case "github.com/alexandre-normand/go-cloud/blob/bytes_written":
 				if sawWritten {
 					continue
 				}

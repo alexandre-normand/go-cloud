@@ -13,7 +13,7 @@
 // limitations under the License.
 
 // Package gcp provides fundamental Wire providers and types for Google Cloud Platform (GCP).
-package gcp // import "gocloud.dev/gcp"
+package gcp // import "github.com/alexandre-normand/go-cloud/gcp"
 
 import (
 	"context"

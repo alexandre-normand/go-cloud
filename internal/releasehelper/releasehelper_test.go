@@ -118,7 +118,7 @@ func Test(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if !strings.Contains(string(c), "gocloud.dev v1.8.99") || !strings.Contains(string(c), "gocloud.dev/submod v1.8.99") {
+	if !strings.Contains(string(c), "github.com/alexandre-normand/go-cloud v1.8.99") || !strings.Contains(string(c), "github.com/alexandre-normand/go-cloud/submod v1.8.99") {
 		t.Error("New versions for require not found in samples/go.mod")
 	}
 }

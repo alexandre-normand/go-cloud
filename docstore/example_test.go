@@ -23,11 +23,11 @@ import (
 
 	firestore "cloud.google.com/go/firestore/apiv1"
 	"github.com/aws/aws-sdk-go/aws/awserr"
-	"gocloud.dev/docstore"
-	_ "gocloud.dev/docstore/awsdynamodb"
-	_ "gocloud.dev/docstore/gcpfirestore"
-	"gocloud.dev/docstore/memdocstore"
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/docstore"
+	_ "github.com/alexandre-normand/go-cloud/docstore/awsdynamodb"
+	_ "github.com/alexandre-normand/go-cloud/docstore/gcpfirestore"
+	"github.com/alexandre-normand/go-cloud/docstore/memdocstore"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 type Player struct {
@@ -101,7 +101,7 @@ func ExampleOpenCollection() {
 	ctx := context.Background()
 	// Open a collection using the gcpfirestore package.
 	// You will need to blank-import the package for this to work:
-	//   import _ "gocloud.dev/docstore/gcpfirestore"
+	//   import _ "github.com/alexandre-normand/go-cloud/docstore/gcpfirestore"
 	coll, err := docstore.OpenCollection(ctx, "firestore://my-collection")
 	if err != nil {
 		log.Fatal(err)
@@ -116,7 +116,7 @@ func ExampleCollection_As() {
 	// access to the underlying *cloud.google.com/go/firestore/apiv1.Client.
 
 	// You will need to blank-import the package for this to work:
-	//   import _ "gocloud.dev/docstore/gcpfirestore"
+	//   import _ "github.com/alexandre-normand/go-cloud/docstore/gcpfirestore"
 
 	// The types exposed for As by gcpfirestore are documented in
 	// https://godoc.org/gocloud.dev/docstore/gcpfirestore#hdr-As
@@ -142,7 +142,7 @@ func ExampleCollection_As() {
 func ExampleCollection_ErrorAs() {
 	// This example is specific to the awsdynamodb implementation.
 	// You will need to blank-import the package for this to work:
-	//   import _ "gocloud.dev/docstore/awsdynamodb"
+	//   import _ "github.com/alexandre-normand/go-cloud/docstore/awsdynamodb"
 
 	// The types exposed for As by mongodocstore are documented in
 	// https://godoc.org/gocloud.dev/docstore/mongodocstore#hdr-As

@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"log"
 
-	"gocloud.dev/secrets"
-	_ "gocloud.dev/secrets/localsecrets"
+	"github.com/alexandre-normand/go-cloud/secrets"
+	_ "github.com/alexandre-normand/go-cloud/secrets/localsecrets"
 )
 
 func Example_openFromURL() {
@@ -30,7 +30,7 @@ func Example_openFromURL() {
 	// This example uses "localsecrets", the in-memory implementation.
 	// We need to add a blank import line to register the localsecrets driver's
 	// URLOpener, which implements secrets.KeeperURLOpener:
-	// import _ "gocloud.dev/secrets/localsecrets"
+	// import _ "github.com/alexandre-normand/go-cloud/secrets/localsecrets"
 	// localsecrets registers for the "base64key" scheme.
 	// All secrets.OpenKeeper URLs also work with "secrets+" or "secrets+keeper+" prefixes,
 	// e.g., "secrets+base64key://..." or "secrets+variable+base64key://...".

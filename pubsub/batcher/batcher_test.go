@@ -26,7 +26,7 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/pubsub/batcher"
+	"github.com/alexandre-normand/go-cloud/pubsub/batcher"
 )
 
 func TestSplit(t *testing.T) {

@@ -43,8 +43,8 @@ package to link it in.
 
 ```go
 import (
-	"gocloud.dev/secrets"
-	_ "gocloud.dev/secrets/<driver>"
+	"github.com/alexandre-normand/go-cloud/secrets"
+	_ "github.com/alexandre-normand/go-cloud/secrets/<driver>"
 )
 ...
 keeper, err := secrets.OpenKeeper(context.Background(), "<driver-url>")
@@ -64,7 +64,7 @@ fine-grained control over the connection settings, you can call the constructor
 function in the driver package directly (like `awskms.OpenKeeper`).
 
 ```go
-import "gocloud.dev/secrets/<driver>"
+import "github.com/alexandre-normand/go-cloud/secrets/<driver>"
 ...
 keeper, err := <driver>.OpenKeeper(...)
 ...
@@ -95,7 +95,7 @@ you can encrypt and decrypt small messages using the keeper.
 To encrypt data with a keeper, you call `Encrypt` with the byte slice you
 want to encrypt.
 
-{{< goexample src="gocloud.dev/secrets.ExampleKeeper_Encrypt" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/secrets.ExampleKeeper_Encrypt" imports="0" >}}
 
 ### Decrypting Data {#decrypt}
 
@@ -105,7 +105,7 @@ to `Encrypt` with a keeper that uses the same secret material (e.g. two AWS
 KMS keepers created with the same customer master key ID). The `Decrypt`
 method will return an error if the input data is corrupted.
 
-{{< goexample src="gocloud.dev/secrets.ExampleKeeper_Decrypt" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/secrets.ExampleKeeper_Decrypt" imports="0" >}}
 
 ### Large Messages {#large-messages}
 
@@ -139,7 +139,7 @@ keeper using [`runtimevar.DecryptDecode`][]. In this example, we assume the
 data is a plain string, but the configuration could be a more structured
 type.
 
-{{< goexample src="gocloud.dev/runtimevar.ExampleDecryptDecode" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/runtimevar.ExampleDecryptDecode" imports="0" >}}
 
 Then you can pass the decoder to the runtime configuration provider of your
 choice. See the [Runtime Configuration How-To Guide][] for more on how to set up
@@ -174,14 +174,14 @@ alternatives, including using environment variables.
 [GCP creds]: https://cloud.google.com/docs/authentication/production
 [`gcloud auth application-default login`]: https://cloud.google.com/sdk/gcloud/reference/auth/application-default/login
 
-{{< goexample "gocloud.dev/secrets/gcpkms.Example_openFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/gcpkms.Example_openFromURL" >}}
 
 #### GCP Constructor {#gcp-ctor}
 
 The [`gcpkms.OpenKeeper`][] constructor opens a GCP KMS key. You must first
 obtain [GCP credentials][GCP creds] and then create a gRPC connection to GCP KMS.
 
-{{< goexample "gocloud.dev/secrets/gcpkms.ExampleOpenKeeper" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/gcpkms.ExampleOpenKeeper" >}}
 
 [`gcpkms.OpenKeeper`]: https://godoc.org/gocloud.dev/secrets/gcpkms#OpenKeeper
 
@@ -199,7 +199,7 @@ It will create an AWS Config based on the AWS SDK V2; see [AWS V2 Config][] to l
 
 [AWS V2 Config]: https://aws.github.io/aws-sdk-go-v2/docs/configuring-sdk/
 
-{{< goexample "gocloud.dev/secrets/awskms.Example_openFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/awskms.Example_openFromURL" >}}
 
 #### AWS Constructor {#aws-ctor}
 
@@ -207,7 +207,7 @@ The [`awskms.OpenKeeper`][] constructor opens a customer master key. You must
 first create an AWS Config with the same region as your key and then
 connect to KMS:
 
-{{< goexample "gocloud.dev/secrets/awskms.ExampleOpenKeeper" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/awskms.ExampleOpenKeeper" >}}
 
 [`awskms.OpenKeeper`]: https://godoc.org/gocloud.dev/secrets/awskms#OpenKeeper
 
@@ -221,7 +221,7 @@ credentials from the `az` command line.
 
 Azure KeyVault URLs are based on the [Azure Key object identifer][Azure Key ID]:
 
-{{< goexample "gocloud.dev/secrets/azurekeyvault.Example_openFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/azurekeyvault.Example_openFromURL" >}}
 
 [Azure KeyVault]: https://azure.microsoft.com/en-us/services/key-vault/
 [Azure Environment Auth]: https://docs.microsoft.com/en-us/go/azure/azure-sdk-go-authorization#use-environment-based-authentication
@@ -231,7 +231,7 @@ Azure KeyVault URLs are based on the [Azure Key object identifer][Azure Key ID]:
 
 The [`azurekeyvault.OpenKeeper`][] constructor opens an Azure KeyVault key.
 
-{{< goexample "gocloud.dev/secrets/azurekeyvault.ExampleOpenKeeper" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/azurekeyvault.ExampleOpenKeeper" >}}
 
 [`azurekeyvault.OpenKeeper`]: https://godoc.org/gocloud.dev/secrets/azurekeyvault#OpenKeeper
 
@@ -242,7 +242,7 @@ information secret. Vault URLs only specify the key ID. The Vault server
 endpoint and authentication token are specified using the environment
 variables `VAULT_SERVER_URL` and `VAULT_SERVER_TOKEN`, respectively.
 
-{{< goexample "gocloud.dev/secrets/hashivault.Example_openFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/hashivault.Example_openFromURL" >}}
 
 [Vault]: https://www.vaultproject.io/
 [transit secrets engine]: https://www.vaultproject.io/docs/secrets/transit/index.html
@@ -252,7 +252,7 @@ variables `VAULT_SERVER_URL` and `VAULT_SERVER_TOKEN`, respectively.
 The [`hashivault.OpenKeeper`][] constructor opens a transit secrets engine
 key. You must first connect to your Vault instance.
 
-{{< goexample "gocloud.dev/secrets/hashivault.ExampleOpenKeeper" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/hashivault.ExampleOpenKeeper" >}}
 
 [`hashivault.OpenKeeper`]: https://godoc.org/gocloud.dev/secrets/hashivault#OpenKeeper
 
@@ -261,7 +261,7 @@ key. You must first connect to your Vault instance.
 The Go CDK can use local encryption for keeping secrets. Internally, it uses
 the [NaCl secret box][] algorithm to perform encryption and authentication.
 
-{{< goexample "gocloud.dev/secrets/localsecrets.Example_openFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/localsecrets.Example_openFromURL" >}}
 
 [NaCl secret box]: https://godoc.org/golang.org/x/crypto/nacl/secretbox
 
@@ -270,7 +270,7 @@ the [NaCl secret box][] algorithm to perform encryption and authentication.
 The [`localsecrets.NewKeeper`][] constructor takes in its secret material as
 a `[]byte`.
 
-{{< goexample "gocloud.dev/secrets/localsecrets.ExampleNewKeeper" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/secrets/localsecrets.ExampleNewKeeper" >}}
 
 [`localsecrets.NewKeeper`]: https://godoc.org/gocloud.dev/secrets/localsecrets#NewKeeper
 

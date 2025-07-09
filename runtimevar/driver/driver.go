@@ -15,13 +15,13 @@
 // Package driver defines interfaces to be implemented by runtimevar drivers, which
 // will be used by the runtimevar package to interact with the underlying services.
 // Application code should use package runtimevar.
-package driver // import "gocloud.dev/runtimevar/driver"
+package driver // import "github.com/alexandre-normand/go-cloud/runtimevar/driver"
 
 import (
 	"context"
 	"time"
 
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 // DefaultWaitDuration is the default value for WaitDuration.

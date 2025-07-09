@@ -15,7 +15,7 @@
 // Package driver defines interfaces to be implemented by blob drivers, which
 // will be used by the blob package to interact with the underlying services.
 // Application code should use package blob.
-package driver // import "gocloud.dev/blob/driver"
+package driver // import "github.com/alexandre-normand/go-cloud/blob/driver"
 
 import (
 	"context"
@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 // ReaderOptions controls Reader behaviors.

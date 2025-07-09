@@ -22,7 +22,7 @@
 // see URLOpener.
 //
 // See https://gocloud.dev/concepts/urls/ for background information.
-package azuremysql // import "gocloud.dev/mysql/azuremysql"
+package azuremysql // import "github.com/alexandre-normand/go-cloud/mysql/azuremysql"
 
 import (
 	"context"
@@ -35,8 +35,8 @@ import (
 
 	"github.com/XSAM/otelsql"
 	"github.com/go-sql-driver/mysql"
-	"gocloud.dev/azure/azuredb"
-	cdkmysql "gocloud.dev/mysql"
+	"github.com/alexandre-normand/go-cloud/azure/azuredb"
+	cdkmysql "github.com/alexandre-normand/go-cloud/mysql"
 )
 
 // URLOpener opens Azure MySQL URLs

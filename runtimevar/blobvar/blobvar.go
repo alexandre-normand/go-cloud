@@ -30,7 +30,7 @@
 // blobvar exposes the following types for As:
 //   - Snapshot: Not supported.
 //   - Error: error, which can be passed to blob.ErrorAs.
-package blobvar // import "gocloud.dev/runtimevar/blobvar"
+package blobvar // import "github.com/alexandre-normand/go-cloud/runtimevar/blobvar"
 
 import (
 	"bytes"
@@ -43,10 +43,10 @@ import (
 	"sync"
 	"time"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 )
 
 func init() {

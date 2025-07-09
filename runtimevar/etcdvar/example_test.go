@@ -19,8 +19,8 @@ import (
 	"log"
 
 	"go.etcd.io/etcd/client/v3"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/etcdvar"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/etcdvar"
 )
 
 func ExampleOpenVariable() {
@@ -42,7 +42,7 @@ func ExampleOpenVariable() {
 
 func Example_openVariableFromURL() {
 	// PRAGMA: This example is used on gocloud.dev; PRAGMA comments adjust how it is shown and can be ignored.
-	// PRAGMA: On gocloud.dev, add a blank import: _ "gocloud.dev/runtimevar/etcdvar"
+	// PRAGMA: On gocloud.dev, add a blank import: _ "github.com/alexandre-normand/go-cloud/runtimevar/etcdvar"
 	// PRAGMA: On gocloud.dev, hide lines until the next blank line.
 	ctx := context.Background()
 

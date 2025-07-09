@@ -25,10 +25,10 @@ import (
 	"sync"
 	"time"
 
-	"gocloud.dev/server"
+	"github.com/alexandre-normand/go-cloud/server"
 
-	"gocloud.dev/server/health"
-	"gocloud.dev/server/requestlog"
+	"github.com/alexandre-normand/go-cloud/server/health"
+	"github.com/alexandre-normand/go-cloud/server/requestlog"
 )
 
 func ExampleServer() {

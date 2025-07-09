@@ -13,7 +13,7 @@
 // limitations under the License.
 
 // Package openurl provides helpers for URLMux and URLOpeners in portable APIs.
-package openurl // import "gocloud.dev/internal/openurl"
+package openurl // import "github.com/alexandre-normand/go-cloud/internal/openurl"
 
 import (
 	"fmt"

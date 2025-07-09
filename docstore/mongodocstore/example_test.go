@@ -18,8 +18,8 @@ import (
 	"context"
 	"log"
 
-	"gocloud.dev/docstore"
-	"gocloud.dev/docstore/mongodocstore"
+	"github.com/alexandre-normand/go-cloud/docstore"
+	"github.com/alexandre-normand/go-cloud/docstore/mongodocstore"
 )
 
 func ExampleOpenCollection() {
@@ -69,7 +69,7 @@ func ExampleOpenCollectionWithIDFunc() {
 
 func Example_openCollectionFromURL() {
 	// PRAGMA: This example is used on gocloud.dev; PRAGMA comments adjust how it is shown and can be ignored.
-	// PRAGMA: On gocloud.dev, add a blank import: _ "gocloud.dev/docstore/mongodocstore"
+	// PRAGMA: On gocloud.dev, add a blank import: _ "github.com/alexandre-normand/go-cloud/docstore/mongodocstore"
 	// PRAGMA: On gocloud.dev, hide lines until the next blank line.
 	ctx := context.Background()
 

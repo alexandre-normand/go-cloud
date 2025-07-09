@@ -19,9 +19,9 @@ import (
 	"reflect"
 	"time"
 
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 
-	"gocloud.dev/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
 )
 
 // encodeDoc encodes a driver.Document as a storedDoc.

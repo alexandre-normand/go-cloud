@@ -24,7 +24,7 @@
 // see URLOpener.
 //
 // See https://gocloud.dev/concepts/urls/ for background information.
-package awsmysql // import "gocloud.dev/mysql/awsmysql"
+package awsmysql // import "github.com/alexandre-normand/go-cloud/mysql/awsmysql"
 
 import (
 	"context"
@@ -37,8 +37,8 @@ import (
 	"github.com/XSAM/otelsql"
 	"github.com/go-sql-driver/mysql"
 	"github.com/google/wire"
-	"gocloud.dev/aws/rds"
-	gcmysql "gocloud.dev/mysql"
+	"github.com/alexandre-normand/go-cloud/aws/rds"
+	gcmysql "github.com/alexandre-normand/go-cloud/mysql"
 )
 
 // Set is a Wire provider set that provides a *sql.DB given

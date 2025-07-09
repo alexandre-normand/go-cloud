@@ -136,7 +136,7 @@ func runOnGomod(path string, reqHandler func(gomodPath, mod, modPath string)) {
 	fmt.Println("Processing", gomodPath)
 	modInfo := parseModuleInfo(gomodPath)
 
-	base := "gocloud.dev"
+	base := "github.com/alexandre-normand/go-cloud"
 
 	for _, r := range modInfo.Require {
 		// Find requirements on modules within the gocloud.dev tree.

@@ -35,8 +35,8 @@ link it in.
 
 ```go
 import (
-	"gocloud.dev/blob"
-	_ "gocloud.dev/blob/<driver>"
+	"github.com/alexandre-normand/go-cloud/blob"
+	_ "github.com/alexandre-normand/go-cloud/blob/<driver>"
 )
 ...
 bucket, err := blob.OpenBucket(context.Background(), "<driver-url>")
@@ -56,7 +56,7 @@ fine-grained control over the connection settings, you can call the constructor
 function in the driver package directly.
 
 ```go
-import "gocloud.dev/blob/<driver>"
+import "github.com/alexandre-normand/go-cloud/blob/<driver>"
 ...
 bucket, err := <driver>.OpenBucket(...)
 ...
@@ -79,24 +79,24 @@ See the [guide below][] for constructor usage for each supported service.
 You can wrap a `*blob.Bucket` to always operate on a subfolder of the bucket
 using `blob.PrefixedBucket`:
 
-{{< goexample "gocloud.dev/blob.ExamplePrefixedBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob.ExamplePrefixedBucket" >}}
 
 Alternatively, you can configure the prefix directly in the `blob.OpenBucket`
 URL:
 
-{{< goexample "gocloud.dev/blob.Example_openFromURLWithPrefix" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob.Example_openFromURLWithPrefix" >}}
 
 ### Single Key Buckets {#singlekey}
 
 You can wrap a `*blob.Bucket` to always operate on a single key
 using `blob.SingleKeyBucket`:
 
-{{< goexample "gocloud.dev/blob.ExampleSingleKeyBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob.ExampleSingleKeyBucket" >}}
 
 Alternatively, you can configure the single key directly in the `blob.OpenBucket`
 URL:
 
-{{< goexample "gocloud.dev/blob.Example_openFromURLWithSingleKey" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob.Example_openFromURLWithSingleKey" >}}
 
 The resulting bucket will ignore the `key` parameter to its functions,
 and always refer to the single key. This can be useful to allow configuration
@@ -123,7 +123,7 @@ must always check the error of `Close`.
 The writer implements [`io.Writer`][], so you can use any functions that take
 an `io.Writer` like `io.Copy` or `fmt.Fprintln`.
 
-{{< goexample src="gocloud.dev/blob.ExampleBucket_NewWriter" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/blob.ExampleBucket_NewWriter" imports="0" >}}
 
 In some cases, you may want to cancel an in-progress write to avoid the blob
 being created or overwritten. A typical reason for wanting to cancel a write
@@ -132,7 +132,7 @@ a write, you cancel the `Context` you pass to the writer. Again, you must
 always `Close` the writer to release the resources, but in this case you can
 ignore the error because the write's failure is expected.
 
-{{< goexample src="gocloud.dev/blob.ExampleBucket_NewWriter_cancel" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/blob.ExampleBucket_NewWriter_cancel" imports="0" >}}
 
 [`io.Writer`]: https://golang.org/pkg/io/#Writer
 
@@ -143,12 +143,12 @@ reader. The reader implements [`io.Reader`][], so you can use any functions
 that take an `io.Reader` like `io.Copy` or `io/io.ReadAll`. You must
 always close a reader after using it to avoid leaking resources.
 
-{{< goexample src="gocloud.dev/blob.ExampleBucket_NewReader" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/blob.ExampleBucket_NewReader" imports="0" >}}
 
 Many storage providers provide efficient random-access to data in buckets. To
 start reading from an arbitrary offset in the blob, use `NewRangeReader`.
 
-{{< goexample src="gocloud.dev/blob.ExampleBucket_NewRangeReader" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/blob.ExampleBucket_NewRangeReader" imports="0" >}}
 
 [`io.Reader`]: https://golang.org/pkg/io/#Reader
 
@@ -156,7 +156,7 @@ start reading from an arbitrary offset in the blob, use `NewRangeReader`.
 
 You can delete blobs using the `Bucket.Delete` method.
 
-{{< goexample src="gocloud.dev/blob.ExampleBucket_Delete" imports="0" >}}
+{{< goexample src="github.com/alexandre-normand/go-cloud/blob.ExampleBucket_Delete" imports="0" >}}
 
 ## Other Usage Samples
 
@@ -183,7 +183,7 @@ alternatives, including using environment variables.
 [GCP creds]: https://cloud.google.com/docs/authentication/production
 [`gcloud auth application-default login`]: https://cloud.google.com/sdk/gcloud/reference/auth/application-default/login
 
-{{< goexample "gocloud.dev/blob/gcsblob.Example_openBucketFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/gcsblob.Example_openBucketFromURL" >}}
 
 Full details about acceptable URLs can be found under the API reference for
 [`gcsblob.URLOpener`][].
@@ -198,7 +198,7 @@ Platform credentials][GCP creds]. (You can reuse the same client for any
 other API that takes in a `*gcp.HTTPClient`.) You can find functions in the
 [`gocloud.dev/gcp`][] package to set this up for you.
 
-{{< goexample "gocloud.dev/blob/gcsblob.ExampleOpenBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/gcsblob.ExampleOpenBucket" >}}
 
 [`gcsblob.OpenBucket`]: https://godoc.org/gocloud.dev/blob/gcsblob#OpenBucket
 [`gocloud.dev/gcp`]: https://godoc.org/gocloud.dev/gcp
@@ -214,7 +214,7 @@ It will create an AWS Config based on the AWS SDK V2; see [AWS V2 Config][] to l
 Full details about acceptable URLs can be found under the API reference for
 [`s3blob.URLOpener`][].
 
-{{< goexample "gocloud.dev/blob/s3blob.Example_openBucketFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/s3blob.Example_openBucketFromURL" >}}
 
 [AWS CLI]: https://aws.amazon.com/cli/
 [AWS V2 Config]: https://aws.github.io/aws-sdk-go-v2/docs/configuring-sdk/
@@ -225,7 +225,7 @@ Full details about acceptable URLs can be found under the API reference for
 The [`s3blob.OpenBucket`][] constructor opens an [S3][] bucket. You must first
 create an AWS Config with the same region as your bucket:
 
-{{< goexample "gocloud.dev/blob/s3blob.ExampleOpenBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/s3blob.ExampleOpenBucket" >}}
 
 [`s3blob.OpenBucket`]: https://godoc.org/gocloud.dev/blob/s3blob#OpenBucket
 [S3]: https://aws.amazon.com/s3/
@@ -262,7 +262,7 @@ when opening a bucket with `blob.OpenBucket`. Go CDK uses the environment
 variables `AZURE_STORAGE_ACCOUNT`, `AZURE_STORAGE_KEY`, and
 `AZURE_STORAGE_SAS_TOKEN`, among others, to configure the credentials.
 
-{{< goexample "gocloud.dev/blob/azureblob.Example_openBucketFromURL" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/azureblob.Example_openBucketFromURL" >}}
 
 Full details about acceptable URLs can be found under the API reference for
 [`azureblob.URLOpener`][].
@@ -276,7 +276,7 @@ The [`azureblob.OpenBucket`][] constructor opens an Azure Blob Storage container
 `azureblob` operates on [Azure Storage Block Blobs][]. You must first create
 an Azure Service Client before you can open a container.
 
-{{< goexample "gocloud.dev/blob/azureblob.ExampleOpenBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/azureblob.ExampleOpenBucket" >}}
 
 [Azure Storage Block Blobs]: https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs#about-block-blobs
 [`azureblob.OpenBucket`]: https://godoc.org/gocloud.dev/blob/azureblob#OpenBucket
@@ -295,9 +295,9 @@ separator, so on Windows, `C:\foo\bar` would be written as
 
 ```go
 import (
-    "gocloud.dev/blob"
-    _ "gocloud.dev/blob/fileblob"
-    _ "gocloud.dev/blob/memblob"
+    "github.com/alexandre-normand/go-cloud/blob"
+    _ "github.com/alexandre-normand/go-cloud/blob/fileblob"
+    _ "github.com/alexandre-normand/go-cloud/blob/memblob"
 )
 
 // ...
@@ -319,11 +319,11 @@ defer bucket2.Close()
 
 You can create an in-memory bucket with [`memblob.OpenBucket`][]:
 
-{{< goexample "gocloud.dev/blob/memblob.ExampleOpenBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/memblob.ExampleOpenBucket" >}}
 
 You can use a local filesystem directory with [`fileblob.OpenBucket`][]:
 
-{{< goexample "gocloud.dev/blob/fileblob.ExampleOpenBucket" >}}
+{{< goexample "github.com/alexandre-normand/go-cloud/blob/fileblob.ExampleOpenBucket" >}}
 
 [`fileblob.OpenBucket`]: https://godoc.org/gocloud.dev/blob/fileblob#OpenBucket
 [`memblob.OpenBucket`]: https://godoc.org/gocloud.dev/blob/memblob#OpenBucket

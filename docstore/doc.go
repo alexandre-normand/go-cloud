@@ -264,11 +264,11 @@
 //
 // All trace and metric names begin with the package import path.
 // The traces add the method name.
-// For example, "gocloud.dev/docstore/ActionList.Do".
+// For example, "github.com/alexandre-normand/go-cloud/docstore/ActionList.Do".
 // The metrics are "completed_calls", a count of completed method calls by driver,
 // method and status (error code); and "latency", a distribution of method latency
 // by driver and method.
-// For example, "gocloud.dev/docstore/latency".
+// For example, "github.com/alexandre-normand/go-cloud/docstore/latency".
 //
 // To enable trace collection in your application, see the documentation at
 // https://opentelemetry.io/docs/instrumentation/go/getting-started/.
@@ -278,4 +278,4 @@
 // # GORM-like Code Generation
 //
 // You may find https://github.com/bartventer/docstore-gen useful.
-package docstore // import "gocloud.dev/docstore"
+package docstore // import "github.com/alexandre-normand/go-cloud/docstore"

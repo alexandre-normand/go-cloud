@@ -22,8 +22,8 @@ import (
 	"testing"
 
 	drvr "github.com/go-sql-driver/mysql"
-	"gocloud.dev/internal/testing/terraform"
-	"gocloud.dev/mysql"
+	"github.com/alexandre-normand/go-cloud/internal/testing/terraform"
+	"github.com/alexandre-normand/go-cloud/mysql"
 )
 
 func TestOpen(t *testing.T) {
@@ -148,12 +148,12 @@ func Test_configFromURL(t *testing.T) {
 			name: "ConfigWithNoOptions",
 			args: args{
 				urlStr:     "gcpmysql://user:password@my-project-id/us-central1/my-instance-id/my-db",
-				dialerName: "gocloud.dev/mysql/gcpmysql/1",
+				dialerName: "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1",
 			},
 			want: func() *drvr.Config {
 				cfg := drvr.NewConfig()
 				cfg.AllowNativePasswords = true
-				cfg.Net = "gocloud.dev/mysql/gcpmysql/1"
+				cfg.Net = "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1"
 				cfg.Addr = "my-project-id:us-central1:my-instance-id"
 				cfg.User = "user"
 				cfg.Passwd = "password"
@@ -166,13 +166,13 @@ func Test_configFromURL(t *testing.T) {
 			name: "ConfigWithSignalOptions",
 			args: args{
 				urlStr:     "gcpmysql://user:password@my-project-id/us-central1/my-instance-id/my-db?parseTime=true",
-				dialerName: "gocloud.dev/mysql/gcpmysql/1",
+				dialerName: "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1",
 			},
 			want: func() *drvr.Config {
 				cfg := drvr.NewConfig()
 				cfg.AllowNativePasswords = true
 				cfg.ParseTime = true
-				cfg.Net = "gocloud.dev/mysql/gcpmysql/1"
+				cfg.Net = "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1"
 				cfg.Addr = "my-project-id:us-central1:my-instance-id"
 				cfg.User = "user"
 				cfg.Passwd = "password"
@@ -185,14 +185,14 @@ func Test_configFromURL(t *testing.T) {
 			name: "ConfigWithMultipleOptions",
 			args: args{
 				urlStr:     "gcpmysql://user:password@my-project-id/us-central1/my-instance-id/my-db?columnsWithAlias=true&parseTime=true",
-				dialerName: "gocloud.dev/mysql/gcpmysql/1",
+				dialerName: "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1",
 			},
 			want: func() *drvr.Config {
 				cfg := drvr.NewConfig()
 				cfg.AllowNativePasswords = true
 				cfg.ColumnsWithAlias = true
 				cfg.ParseTime = true
-				cfg.Net = "gocloud.dev/mysql/gcpmysql/1"
+				cfg.Net = "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1"
 				cfg.Addr = "my-project-id:us-central1:my-instance-id"
 				cfg.User = "user"
 				cfg.Passwd = "password"
@@ -205,7 +205,7 @@ func Test_configFromURL(t *testing.T) {
 			name: "InstanceFromURLError",
 			args: args{
 				urlStr:     "gcpmysql://user:password@my-project-id/us-central1/my-db",
-				dialerName: "gocloud.dev/mysql/gcpmysql/1",
+				dialerName: "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1",
 			},
 			want:    nil,
 			wantErr: true,
@@ -214,7 +214,7 @@ func Test_configFromURL(t *testing.T) {
 			name: "DNSParseError",
 			args: args{
 				urlStr:     "gcpmysql://user:password@my-project-id/us-central1/my-instance-id/my-db?parseTime=nope",
-				dialerName: "gocloud.dev/mysql/gcpmysql/1",
+				dialerName: "github.com/alexandre-normand/go-cloud/mysql/gcpmysql/1",
 			},
 			want:    nil,
 			wantErr: true,

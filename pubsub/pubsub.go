@@ -52,17 +52,17 @@
 //
 // All trace and metric names begin with the package import path.
 // The traces add the method name.
-// For example, "gocloud.dev/pubsub/Topic.Send".
+// For example, "github.com/alexandre-normand/go-cloud/pubsub/Topic.Send".
 // The metrics are "completed_calls", a count of completed method calls by driver,
 // method and status (error code); and "latency", a distribution of method latency
 // by driver and method.
-// For example, "gocloud.dev/pubsub/latency".
+// For example, "github.com/alexandre-normand/go-cloud/pubsub/latency".
 //
 // To enable trace collection in your application, see "Configure an Exporter" at
 // https://opentelemetry.io/docs/languages/go/getting-started/.
 // To enable metric collection in your application, see "Metrics" at
 // https://opentelemetry.io/docs/languages/go/metrics/.
-package pubsub // import "gocloud.dev/pubsub"
+package pubsub // import "github.com/alexandre-normand/go-cloud/pubsub"
 
 import (
 	"context"
@@ -78,13 +78,13 @@ import (
 	"unicode/utf8"
 
 	"github.com/googleapis/gax-go/v2"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/openurl"
-	gcdkotel "gocloud.dev/internal/otel"
-	"gocloud.dev/internal/retry"
-	"gocloud.dev/pubsub/batcher"
-	"gocloud.dev/pubsub/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/openurl"
+	gcdkotel "github.com/alexandre-normand/go-cloud/internal/otel"
+	"github.com/alexandre-normand/go-cloud/internal/retry"
+	"github.com/alexandre-normand/go-cloud/pubsub/batcher"
+	"github.com/alexandre-normand/go-cloud/pubsub/driver"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -344,7 +344,7 @@ func newTopic(d driver.Topic, opts *batcher.Options) *Topic {
 	return t
 }
 
-const pkgName = "gocloud.dev/pubsub"
+const pkgName = "github.com/alexandre-normand/go-cloud/pubsub"
 
 var (
 

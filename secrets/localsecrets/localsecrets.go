@@ -26,7 +26,7 @@
 // # As
 //
 // localsecrets does not support any types for As.
-package localsecrets // import "gocloud.dev/secrets/localsecrets"
+package localsecrets // import "github.com/alexandre-normand/go-cloud/secrets/localsecrets"
 
 import (
 	"context"
@@ -37,8 +37,8 @@ import (
 	"io"
 	"net/url"
 
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/secrets"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/secrets"
 	"golang.org/x/crypto/nacl/secretbox"
 )
 

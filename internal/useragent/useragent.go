@@ -14,7 +14,7 @@
 
 // Package useragent includes constants and utilitiesfor setting the User-Agent
 // for Go CDK connections to GCP.
-package useragent // import "gocloud.dev/internal/useragent"
+package useragent // import "github.com/alexandre-normand/go-cloud/internal/useragent"
 
 import (
 	"fmt"

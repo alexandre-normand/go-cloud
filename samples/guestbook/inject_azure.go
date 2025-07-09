@@ -23,12 +23,12 @@ import (
 	azcontainer "github.com/Azure/azure-sdk-for-go/sdk/storage/azblob/container"
 	"github.com/google/wire"
 	"go.opencensus.io/trace"
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/azureblob"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/blobvar"
-	"gocloud.dev/server"
-	"gocloud.dev/server/requestlog"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/azureblob"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/blobvar"
+	"github.com/alexandre-normand/go-cloud/server"
+	"github.com/alexandre-normand/go-cloud/server/requestlog"
 )
 
 // This file wires the generic interfaces up to Microsoft Azure. It

@@ -24,8 +24,8 @@ import (
 	"sync"
 
 	vkit "cloud.google.com/go/firestore/apiv1"
-	"gocloud.dev/docstore"
-	"gocloud.dev/gcp"
+	"github.com/alexandre-normand/go-cloud/docstore"
+	"github.com/alexandre-normand/go-cloud/gcp"
 )
 
 func init() {

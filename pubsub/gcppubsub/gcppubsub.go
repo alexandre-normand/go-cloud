@@ -47,7 +47,7 @@
 //   - Message.AfterSend: *string for the pb.PublishResponse.MessageIds entry corresponding to the message.
 //   - Message: *pb.PubsubMessage, *pb.ReceivedMessage
 //   - Error: *google.golang.org/grpc/status.Status
-package gcppubsub // import "gocloud.dev/pubsub/gcppubsub"
+package gcppubsub // import "github.com/alexandre-normand/go-cloud/pubsub/gcppubsub"
 
 import (
 	"context"
@@ -64,13 +64,13 @@ import (
 	raw "cloud.google.com/go/pubsub/apiv1"
 	pb "cloud.google.com/go/pubsub/apiv1/pubsubpb"
 	"github.com/google/wire"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
-	"gocloud.dev/pubsub"
-	"gocloud.dev/pubsub/batcher"
-	"gocloud.dev/pubsub/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/useragent"
+	"github.com/alexandre-normand/go-cloud/pubsub"
+	"github.com/alexandre-normand/go-cloud/pubsub/batcher"
+	"github.com/alexandre-normand/go-cloud/pubsub/driver"
 	"google.golang.org/api/option"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

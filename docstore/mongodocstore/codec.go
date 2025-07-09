@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"gocloud.dev/docstore/driver"
+	"github.com/alexandre-normand/go-cloud/docstore/driver"
 )
 
 // Encode and decode to map[string]interface{}.

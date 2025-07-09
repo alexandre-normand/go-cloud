@@ -32,7 +32,7 @@
 // awsparamstore exposes the following types for As:
 //   - Snapshot: *ssm.GetParameterOutput
 //   - Error: any error type returned by the service, notably smithy.APIError
-package awsparamstore // import "gocloud.dev/runtimevar/awsparamstore"
+package awsparamstore // import "github.com/alexandre-normand/go-cloud/runtimevar/awsparamstore"
 
 import (
 	"context"
@@ -48,10 +48,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/ssm"
 	"github.com/aws/smithy-go"
 	"github.com/google/wire"
-	gcaws "gocloud.dev/aws"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/driver"
+	gcaws "github.com/alexandre-normand/go-cloud/aws"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/driver"
 )
 
 func init() {

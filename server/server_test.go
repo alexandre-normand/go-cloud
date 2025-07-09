@@ -21,7 +21,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gocloud.dev/server/requestlog"
+	"github.com/alexandre-normand/go-cloud/server/requestlog"
 )
 
 const (

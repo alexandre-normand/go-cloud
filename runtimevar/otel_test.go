@@ -16,16 +16,16 @@ package runtimevar_test
 
 import (
 	"context"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/testing/oteltest"
-	"gocloud.dev/runtimevar"
-	"gocloud.dev/runtimevar/constantvar"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/testing/oteltest"
+	"github.com/alexandre-normand/go-cloud/runtimevar"
+	"github.com/alexandre-normand/go-cloud/runtimevar/constantvar"
 	"testing"
 )
 
 const (
-	pkgName = "gocloud.dev/runtimevar"
-	driver  = "gocloud.dev/runtimevar/constantvar"
+	pkgName = "github.com/alexandre-normand/go-cloud/runtimevar"
+	driver  = "github.com/alexandre-normand/go-cloud/runtimevar/constantvar"
 )
 
 func TestOpenTelemetry(t *testing.T) {

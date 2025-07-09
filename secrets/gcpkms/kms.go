@@ -29,7 +29,7 @@
 //
 // gcpkms exposes the following type for As:
 //   - Error: *google.golang.org/grpc/status.Status
-package gcpkms // import "gocloud.dev/secrets/gcpkms"
+package gcpkms // import "github.com/alexandre-normand/go-cloud/secrets/gcpkms"
 
 import (
 	"context"
@@ -41,11 +41,11 @@ import (
 	cloudkms "cloud.google.com/go/kms/apiv1"
 	"cloud.google.com/go/kms/apiv1/kmspb"
 	"github.com/google/wire"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/gcp"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/useragent"
-	"gocloud.dev/secrets"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcp"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/useragent"
+	"github.com/alexandre-normand/go-cloud/secrets"
 	"google.golang.org/api/option"
 	"google.golang.org/grpc/status"
 )

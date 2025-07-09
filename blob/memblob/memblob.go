@@ -25,7 +25,7 @@
 // # As
 //
 // memblob does not support any types for As.
-package memblob // import "gocloud.dev/blob/memblob"
+package memblob // import "github.com/alexandre-normand/go-cloud/blob/memblob"
 
 import (
 	"bytes"
@@ -33,7 +33,7 @@ import (
 	"crypto/md5"
 	"errors"
 	"fmt"
-	"gocloud.dev/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
 	"hash"
 	"io"
 	"net/url"
@@ -42,9 +42,9 @@ import (
 	"sync"
 	"time"
 
-	"gocloud.dev/blob"
-	"gocloud.dev/blob/driver"
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/blob"
+	"github.com/alexandre-normand/go-cloud/blob/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 const defaultPageSize = 1000

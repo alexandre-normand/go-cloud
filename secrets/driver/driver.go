@@ -15,12 +15,12 @@
 // Package driver defines interfaces to be implemented by secrets drivers, which
 // will be used by the secrets package to interact with the underlying services.
 // Application code should use package secrets.
-package driver // import "gocloud.dev/secrets/driver"
+package driver // import "github.com/alexandre-normand/go-cloud/secrets/driver"
 
 import (
 	"context"
 
-	"gocloud.dev/gcerrors"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
 )
 
 // Keeper holds the key information to encrypt a plain text message into a

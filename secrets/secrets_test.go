@@ -22,10 +22,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/gcerr"
-	"gocloud.dev/internal/testing/oteltest"
-	"gocloud.dev/secrets/driver"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/gcerr"
+	"github.com/alexandre-normand/go-cloud/internal/testing/oteltest"
+	"github.com/alexandre-normand/go-cloud/secrets/driver"
 )
 
 var errFake = errors.New("fake")
@@ -107,7 +107,7 @@ func TestOpenTelemetry(t *testing.T) {
 	// Check collected spans.
 	spanStubs := te.GetSpans()
 	metrics := te.GetMetrics(ctx)
-	diff := oteltest.Diff(spanStubs.Snapshots(), metrics, pkgName, "gocloud.dev/secrets", []oteltest.Call{
+	diff := oteltest.Diff(spanStubs.Snapshots(), metrics, pkgName, "github.com/alexandre-normand/go-cloud/secrets", []oteltest.Call{
 		{Method: "Encrypt", Code: gcerrors.Internal},
 		{Method: "Decrypt", Code: gcerrors.Internal},
 		{Method: "Decrypt", Code: gcerrors.Internal},

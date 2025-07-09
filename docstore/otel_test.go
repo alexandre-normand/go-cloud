@@ -16,10 +16,10 @@ package docstore_test
 
 import (
 	"context"
-	"gocloud.dev/docstore"
-	"gocloud.dev/docstore/memdocstore"
-	"gocloud.dev/gcerrors"
-	"gocloud.dev/internal/testing/oteltest"
+	"github.com/alexandre-normand/go-cloud/docstore"
+	"github.com/alexandre-normand/go-cloud/docstore/memdocstore"
+	"github.com/alexandre-normand/go-cloud/gcerrors"
+	"github.com/alexandre-normand/go-cloud/internal/testing/oteltest"
 	"testing"
 )
 
@@ -49,8 +49,8 @@ func TestOpenTelemetry(t *testing.T) {
 	spanStubs := te.GetSpans()
 	metrics := te.GetMetrics(ctx)
 	const (
-		pkgName = "gocloud.dev/docstore"
-		driver  = "gocloud.dev/docstore/memdocstore"
+		pkgName = "github.com/alexandre-normand/go-cloud/docstore"
+		driver  = "github.com/alexandre-normand/go-cloud/docstore/memdocstore"
 	)
 
 	diff := oteltest.Diff(spanStubs.Snapshots(), metrics, pkgName, driver, []oteltest.Call{
