@@ -1,4 +1,4 @@
-module gocloud.dev/internal/website
+module github.com/alexandre-normand/go-cloud/internal/website
 
 go 1.23.0
 

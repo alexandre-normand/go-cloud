@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-module gocloud.dev/pubsub/rabbitpubsub
+module github.com/alexandre-normand/go-cloud/pubsub/rabbitpubsub
 
 go 1.24
 

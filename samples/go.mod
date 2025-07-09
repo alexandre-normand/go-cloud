@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-module gocloud.dev/samples
+module github.com/alexandre-normand/go-cloud/samples
 
 go 1.24
 
